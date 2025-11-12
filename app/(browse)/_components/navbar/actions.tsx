@@ -18,23 +18,22 @@ export const Actions=async()=>{
             </SignInButton>
            )} 
            {!!user && (
-            <div>
-              <Button
-              size="sm"
-              variant="ghost"
-              className="text-muted-foreground hover:text-primary"
-              asChild
-              >
-                <Link href={`/u/${user.username}`}>
-                <Clapperboard className=" hidden lg:flex h-5 w-5 lg:mr-2"/>
-                <span className="hidden lg:flex">
-                    Dashboard
-                </span>
-                </Link>
-              </Button>
-              <UserButton/>
-            </div>
-           )}
+           <div className="flex items-center gap-x-2">
+             <Button
+               size="sm"
+               variant="ghost"
+               className="text-muted-foreground hover:text-primary"
+               asChild
+             >
+               <Link href={`/u/${user.username}`}>
+                <Clapperboard className="hidden lg:flex h-5 w-5 lg:mr-2" />
+                <span className="hidden lg:flex">Dashboard</span>
+               </Link>
+             </Button>
+             <UserButton />
+           </div>
+         )}
+
         </div>
     )
 }
