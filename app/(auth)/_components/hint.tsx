@@ -27,9 +27,10 @@ export const Hint=({
                 {children}
               </TooltipTrigger>
               <TooltipContent
-              className="text-black bg-white"
+              className="text-black bg-white [&>svg]:hidden"
               side={side}
               align={align}
+
               >
                 <p className="font=semibold">
                     {label}
